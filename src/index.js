@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import LoginPage from "./Login.js";
+import LoginPage from "./login.js";
 
 ReactDOM.render(
   <React.StrictMode>
