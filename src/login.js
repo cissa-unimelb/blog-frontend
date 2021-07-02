@@ -8,7 +8,7 @@ export default function LoginPage(props) {
     let [password, setPassword] = useState("");
 
     const submit = () => {
-        // Interface with backend and login (store local cookie)
+        // TODO: Interface with backend and login (store local cookie)
     }
     
     return (
