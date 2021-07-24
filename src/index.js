@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
 
-import LoginPage from "./login.js";
+import Home from "./components/pages/Home";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route path="/login" component={LoginPage} />
+        <Route path="/" component={Home} />
       </Switch>
     </Router>
   </React.StrictMode>,
