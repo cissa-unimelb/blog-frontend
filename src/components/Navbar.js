@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./Navbar.css"
 import { Button } from './Button';
@@ -20,13 +21,21 @@ function Navbar() {
             setButton(true);
         }
     };
+
+    useEffect(() => {
+        showButton();
+      }, []);
+
     window.addEventListener('resize', showButton);
+    
+
 
     return (
-        <div>
-            <nav className="header navbar">
+        <>
+            <nav className="navbar">
                 <div className="navbar-container">
-                    <Link to="/" className="navbar-logo">
+                
+                    <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
                         <img className="navbar-logo-img" src={logo} alt="Logo" />
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
@@ -43,18 +52,13 @@ function Navbar() {
                                 Create Post
                             </Link>
                         </li>
-                        <li className='nav-item'>
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                                Login
-                            </Link>
-                        </li>
-                    </ul>
-                    {button && <Button buttonStyle='btn--primary'>Login</Button>}
+                        
+                    </ul> 
                 </div>
             </nav>
-        </div>
+        </>
     )
 }
 
-export default Navbar
+export default Navbar;
 

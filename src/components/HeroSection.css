@@ -1,41 +1,27 @@
-
-
 .hero-container {
-    background: url('./images/home.jpeg') center center/cover no-repeat; 
-    height: 100vh;
-    width: 120%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
-    margin: auto -16px;
+  background: url("./images/home.jpeg") center center/cover no-repeat;
+
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+  margin: auto -1rem;
 }
 
 @media screen and (max-width: 960px) {
-    .hero-container > h1 {
-        font-size: 70px;
-        margin-top: -150px;
-    }
+  .hero-container > h1 {
+    font-size: 70px;
+    margin-top: -150px;
+  }
 }
-  
-  
-/* christopher-gower-m_HRfLhgABo-unsplash 2 */
 
-/* position: absolute;
-width: 1440px;
-height: 739px;
-left: 0px;
-top: 90px;
-
-background: url(christopher-gower-m_HRfLhgABo-unsplash.jpg); */
-/* Computing-and-Information-Systems-Students-Association-1024x292 1 */
-
-/* position: absolute;
-width: 118px;
-height: 32px;
-left: 45px;
-top: 33px;
-
-background: url(Computing-and-Information-Systems-Students-Association-1024x292.png); */
+@media screen and (max-width: 768px) {
+  .hero-container > h1 {
+    font-size: 50px;
+    margin-top: -100px;
+  }
+}
