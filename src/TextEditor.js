@@ -51,7 +51,6 @@ const TextEditor = (props) => {
     var authorName = ''
     console.log(props.id);
     const [body, setBody] = useState('')
-    var postData = ''
     const handleSubmit = (e) => {
         e.preventDefault()
         // onSubmit({ body })
@@ -67,6 +66,7 @@ const TextEditor = (props) => {
         if(props.id != undefined){
             axios.post("http://127.0.0.1:5000/api/blog/update_blog/"+props.id, data).then(response =>{
                 console.log(response)
+                // props.history.push("/post_list")
                 // const holder = document.createElement('div')
                 // document.body.appendChild(holder)
                 // ReactDOM.render(
@@ -86,7 +86,7 @@ const TextEditor = (props) => {
         <form onSubmit={handleSubmit} id="form1">
             Title: <input type="text" name="title" id="Title"></input>
             <input type="text" name="text" id="Text" style={{"display":"none"}}></input>
-            Author: <input type="text" name="author" id="Author" readOnly='readOnly' disabled></input>
+            Author: <input type="text" name="author" id="Author"></input>
             <input type="number" name="num_likes" id="Likes" style={{"display":"none"}}></input>
             <input type="number" name="tags" id="Tags" style={{"display":"none"}}></input>
             <CKEditor
@@ -101,8 +101,13 @@ const TextEditor = (props) => {
                         editor.setData(data);
                         document.getElementById("Title").value = response.data.data.blog.title
                         document.getElementById("Text").value = response.data.data.blog.text
-                        document.getElementById("Author").value = response.data.data.blog.author
-                        authorName = response.data.data.blog.author
+                        if(response.data.data.blog.author != null){
+                            authorName = response.data.data.blog.author
+                        }
+                        else{
+                            authorName = "default author"
+                        }
+                        document.getElementById("Author").value = authorName
                         // props.getChildrenData(authorName)
                     })
                 }
@@ -110,8 +115,10 @@ const TextEditor = (props) => {
                     document.getElementById("Author").value = "default author"
                 }
                 editor.plugins.get('FileRepository')
-                    .createUploadAdapter = (loader) => {
-                        return new UploadAdapter(loader)
+                    .createUploadAdapter = (loader,authorName,titleName) => {
+                        authorName = document.getElementById("Author").value
+                        titleName = document.getElementById("Title").value
+                        return new UploadAdapter(loader,authorName,titleName)
                     }
                 // You can store the "editor" and use when it is needed.
                 console.log( 'Editor is ready to use!', editor );
