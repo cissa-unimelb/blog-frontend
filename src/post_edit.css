@@ -1,3 +1,68 @@
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  } */
+
+.editor-title{
+    z-index: 998;
+    color:  darkgrey;;
+    width: 960px;
+    text-align: left;
+    background: white;
+    margin-top: 50px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    border-bottom: solid;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.editor-title-text{
+    margin-left: 20px;
+}
+.editor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 1000px; 
+    background: url('./components/images/home-copy.jpeg') center center/cover no-repeat;
+    /* background-color: rgba(250,250,250); */
+}
+.form-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 90%;
+    margin-top: 10px;
+}
+#form1{
+    z-index: 999;
+    width: 960px;
+    background: white;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.editor-bg{
+    position: absolute;
+    height: 1000px;
+    width: 90%;
+    /* background: url('./components/images/home.jpeg') center center/cover no-repeat; */
+    filter: blur(5px);
+    z-index: 990;
+}
+.ck-content{
+    min-height: 800px;
+}
+.ck.ck-editor {
+    width: 95%;
+}
 body {
     text-align: center;
 }
@@ -6,4 +71,53 @@ section {
     width: 80%;
     margin: auto;
     text-align: left;
+}
+.title{
+    width: 80%;
+}
+#Title{
+    width: 100%;
+    font-size: xx-large;
+    text-align: center;
+    font-weight: 600;
+    border: none;
+    margin: 0px;
+    overflow-y: visible;
+    font-family: inherit;
+    resize: none;
+    background: transparent;
+}
+.author{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.author-avatar{
+    /* background: url('./components/images/home.jpeg') center center/cover no-repeat; */
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+#Author{
+    text-align: center;
+    border: none;
+    font-size: 18px;
+    width: 100%;
+    font-family: inherit;
+    resize: none;
+    font-weight: 300;
+    height: 30px;
+    line-height: 30px;
+    background: transparent;
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+    border-radius: 6px;
+}
+.btn:hover{
+    background-color: rgba(213,213,213,0.5);
 }

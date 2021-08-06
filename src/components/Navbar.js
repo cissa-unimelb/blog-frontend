@@ -33,11 +33,11 @@ function Navbar() {
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                        <li className='nav-item'>
+                        {/* <li className='nav-item'>
                             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                                 Join CISSA
                             </Link>
-                        </li>
+                        </li> */}
                         <li className='nav-item'>
                             <Link to="post_edit" className="nav-links" onClick={closeMobileMenu}>
                                 Create Post
@@ -49,7 +49,7 @@ function Navbar() {
                             </Link>
                         </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--primary'>Login</Button>}
+                    {/* {button && <Button buttonStyle='btn--primary'>Login</Button>} */}
                 </div>
             </nav>
         </div>
