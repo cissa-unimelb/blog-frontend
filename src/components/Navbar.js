@@ -72,13 +72,15 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <GoogleLogin
-                clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-                buttonText="Log in with Google"
-                onSuccess={handleLogin}
-                onFailure={handleLogin}
-                cookiePolicy={"single_host_origin"}
-              />
+              <div className="nav-links">
+                <GoogleLogin
+                  clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+                  buttonText="Login with Google"
+                  onSuccess={handleLogin}
+                  onFailure={handleLogin}
+                  cookiePolicy={"single_host_origin"}
+                />
+              </div>
             </li>
           </ul>
           {/* {button && <Button buttonStyle='btn--primary'>Login</Button>} */}
