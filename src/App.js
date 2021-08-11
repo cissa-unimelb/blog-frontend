@@ -29,17 +29,17 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/admin/" exact component={Home} />
           <Route
-            path="/post_edit/:id"
+            path="/admin/post_edit/:id"
             render={() => (isLoggedIn() ? <PostEditor /> : <Redirect to="/" />)}
           />
           <Route
-            path="/post_edit"
+            path="/admin/post_edit"
             render={() => (isLoggedIn() ? <PostEditor /> : <Redirect to="/" />)}
           />
           <Route
-            path="/post_list"
+            path="/admin/post_list"
             render={() => (isLoggedIn() ? <PostList /> : <Redirect to="/" />)}
           />
         </Switch>
