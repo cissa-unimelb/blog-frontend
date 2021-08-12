@@ -1,8 +1,4 @@
 import React from "react";
-import ReactDOM from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./components/pages/Home";
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,12 +6,14 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import LoginPage from "./login.js";
-import PostEditor from "./post_edit";
-import PostList from "./post_list";
+import Navbar from "./admin/Navbar";
+import Footer from "./admin/Footer";
+import Login from "./admin/pages/Login";
+import PostEditor from "./admin/pages/PostEdit";
+import PostList from "./admin/pages/PostList";
 
 function App() {
-  function isLoggedIn() {
+  const isLoggedIn = () => {
     const googleToken = localStorage.getItem("googleToken");
 
     if (googleToken) {
@@ -29,18 +27,18 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/admin/" exact component={Home} />
+          <Route path="/admin/login" exact component={Login} />
           <Route
-            path="/admin/post_edit/:id"
-            render={() => (isLoggedIn() ? <PostEditor /> : <Redirect to="/" />)}
+            path="/admin/edit/:id"
+            render={(props) => (isLoggedIn() ? <PostEditor {...props} /> : <Redirect to="/admin/login" />)}
           />
           <Route
-            path="/admin/post_edit"
-            render={() => (isLoggedIn() ? <PostEditor /> : <Redirect to="/" />)}
+            path="/admin/edit"
+            render={(props) => (isLoggedIn() ? <PostEditor {...props} /> : <Redirect to="/admin/login" />)}
           />
           <Route
-            path="/admin/post_list"
-            render={() => (isLoggedIn() ? <PostList /> : <Redirect to="/" />)}
+            path="/admin"
+            render={() => (isLoggedIn() ? <PostList /> : <Redirect to="/admin/login" />)}
           />
         </Switch>
         <Footer />
@@ -48,16 +46,5 @@ function App() {
     </>
   );
 }
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Router>
-//       <Switch>
-//         <Route path="/login" component={LoginPage} />
-//       </Switch>
-//     </Router>
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
 
 export default App;

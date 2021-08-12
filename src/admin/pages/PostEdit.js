@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import TextEditor from './TextEditor';
-import "./post_edit.css";
+import TextEditor from '../TextEditor';
+import "./PostEdit.css";
 
 function Title (props) {
-  if (props.state == "edit"){
+  if (props.edit){
     return(
       <div className="editor-title">
           <div className="editor-title-text">Edit Post</div>
@@ -26,33 +26,22 @@ function BackGround (props) {
   )
 }
 
-export default function PostEditor(props){
-  // var AuthorName
-  // function getChildrenData(e) {
-  //   console.log('我是子组件的值',e)
-  //   AuthorName = e
-  // }
-  // console.log('我是子组件传来的值AuthorName',AuthorName)
-  let Id,State
-  if (props.match.params.id != undefined){
-    Id = props.match.params.id
-    State = "edit"
-    
+export default function PostEditor(props) {
+  if (props.match && props.match.params.id){
     return (
       <div className="editor">
         {/* <Title state={State} authorName = {AuthorName}/>
         <TextEditor id={Id} getChildrenData = {getChildrenData}/>*/}
-        <Title state={State}/>
+        <Title edit/>
         <BackGround />
-        <TextEditor id={Id}/>
+        <TextEditor id={props.match.params.id}/>
       </div>
     )
   }
   else{
-    State = "add"
     return (
       <div className="editor">
-        <Title state={State}/>
+        <Title/>
         <BackGround />
         <TextEditor />
       </div>

@@ -8,7 +8,7 @@ class ListItem extends React.Component {
 
     render () {
         let info = this.props;
-        let nextHref = '/post_edit/'+ info.info._id.$oid
+        let nextHref = '/admin/edit/'+ info.info._id.$oid
         return (
             <div>
                 <p>{info.info.title}</p>

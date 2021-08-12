@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import "./Navbar.css";
-import { Button } from "./Button";
 import logo from "./images/logo.png"; // Tell webpack this JS file uses this image
 import GoogleLogin from "react-google-login";
 import axios from "axios";
@@ -26,7 +25,7 @@ function Navbar() {
 
   const handleLogin = async (googleData) => {
     const res = await axios.post(
-      "/api/auth/google",
+      "http://localhost:5000/api/auth/google",
       {
         token: googleData.tokenId,
       },

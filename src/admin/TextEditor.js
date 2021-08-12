@@ -5,10 +5,9 @@ import UploadAdapter from './UploadAdapter';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 
-import ReactDOM from 'react-dom'
 // import Dialog from './Dialog'
 // import staticize from './Staticize';
-import avatar from './components/images/IMG_2744.jpg'; 
+import avatar from './images/IMG_2744.jpg'; 
 
 // const TextEditor = ({ onSubmit }, props) => {
 const TextEditor = (props) => {

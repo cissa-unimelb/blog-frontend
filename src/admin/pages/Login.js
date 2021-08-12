@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroSection from '../HeroSection';
 
-function Home() {
+function Login() {
     return (
         <>
             <HeroSection />
@@ -9,4 +9,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Login;
