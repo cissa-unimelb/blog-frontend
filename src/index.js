@@ -1,22 +1,51 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
-import Home from "./components/pages/Home";
+import Home from "./blog/pages/Home";
+
+import Login from "./admin/pages/Login";
+import PostEditor from "./admin/pages/PostEdit";
+import PostList from "./admin/pages/PostList";
+
+function isLoggedIn() {
+  const googleToken = localStorage.getItem("googleToken");
+
+  if (googleToken) {
+    return true;
+  }
+  alert("not logged in");
+  return false;
+}
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route path="/" component={Home} />
+        <Route path="/" exact component={Home} />
+        <Route path="/admin/login" exact component={Login} />
+        <Route
+          path="/admin/edit/:id"
+          render={(props) => (isLoggedIn() ? <PostEditor {...props} /> : <Redirect to="/admin/login" />)}
+        />
+        <Route
+          exact
+          path="/admin/edit"
+          render={(props) => (isLoggedIn() ? <PostEditor {...props} /> : <Redirect to="/admin/login" />)}
+        />
+        <Route
+          exact
+          path="/admin"
+          render={() => (isLoggedIn() ? <PostList /> : <Redirect to="/admin/login" />)}
+        />
+        <Route path="/:val" render={() => <Redirect to="/" />} />
       </Switch>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

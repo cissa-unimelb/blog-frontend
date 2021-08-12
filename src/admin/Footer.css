@@ -1,0 +1,13 @@
+.bar {
+    background:white;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: relative;
+    top: 0;
+    z-index: 999;
+    margin: auto -16px;
+    padding: .5rem .1rem;
+  }
