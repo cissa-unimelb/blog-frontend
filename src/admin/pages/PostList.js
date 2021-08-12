@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import List from '../List';
+import Navbar from '../Navbar';
+import Footer from '../Footer';
 function Title (props) {
   return(
     <div>
@@ -11,8 +13,10 @@ function Title (props) {
 export default function PostList(props){
     return (
       <div>
+        <Navbar/>
         <Title title={'123'}/>
         <List/>
+        <Footer/>
       </div>
     )
 }

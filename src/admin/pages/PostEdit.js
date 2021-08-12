@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TextEditor from '../TextEditor';
+import Navbar from '../Navbar';
+import Footer from '../Footer';
 import "./PostEdit.css";
 
 function Title (props) {
@@ -41,9 +43,11 @@ export default function PostEditor(props) {
   else{
     return (
       <div className="editor">
-        <Title/>
+        <Navbar />
+        <Title />
         <BackGround />
         <TextEditor />
+        <Footer />
       </div>
     )
   }
