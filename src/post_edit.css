@@ -6,7 +6,7 @@
 
 .editor-title{
     z-index: 998;
-    color:  darkgrey;;
+    color:  darkgrey;
     width: 960px;
     text-align: left;
     background: white;
@@ -120,4 +120,54 @@ section {
 }
 .btn:hover{
     background-color: rgba(213,213,213,0.5);
+}
+.btn-edit{
+    width: 80px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    font-size: 18px;
+    margin: 0;
+    margin-left: 10px;
+}
+.btn-edit:hover{
+    background-color: rgba(213,213,213,0.5);
+}
+#list1{
+    z-index: 999;
+    width: 960px;
+    background: white;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    min-height: 670px;
+}
+.list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    border-bottom: solid;
+}
+.item-title{
+    font-size: 18px;
+}
+.default-results{
+    font-size: 24px;
+    font-weight: 800;
+    color: darkgrey;
+    position: relative;
+    top: 300px;
+}
+.list-navi{
+    position: inherit;
+    bottom: 20px;
+    width: inherit;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    display: none;
 }
