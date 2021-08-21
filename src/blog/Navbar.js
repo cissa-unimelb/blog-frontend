@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./Navbar.css"
-
+import { Button } from './Button';
+import logo from './images/logo.png'; // Tell webpack this JS file uses this image
+console.log(logo);
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -32,36 +34,25 @@ function Navbar() {
         <>
             <nav className="navbar">
                 <div className="navbar-container">
+                
+                    <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+                        <img className="navbar-logo-img" src={logo} alt="Logo" />
+                    </Link>
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
                             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                                New
+                                Join CISSA
                             </Link>
                         </li>
                         <li className='nav-item'>
                             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                                Industry Talks
+                                Create Post
                             </Link>
                         </li>
-
-                        <li className='nav-item'>
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                                Development
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                                Machine Learning
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                                Subject FAQ
-                            </Link>
-                        </li>
+                        
                     </ul> 
                 </div>
             </nav>

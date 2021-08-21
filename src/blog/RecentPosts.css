@@ -4,23 +4,19 @@
 }
 
 .cards2 {
-  padding: 4rem;
-  background: white;
-  margin: auto -16px;
+  /* padding: 4rem; */
+  background: transparent;
 }
 
 .cards3 {
-  padding: 3rem;
-  background: white;
+  padding: 4rem;
+  background: transparent;
 }
 
 .cards_container2 {
   display: flex;
   flex-flow: column;
   align-items: center;
-
-  width: 90%;
-  margin: 0 auto;
 }
 
 .cards_container3 {
@@ -28,28 +24,29 @@
   flex-flow: column;
   align-items: center;
 
-  width: 90%;
-  margin: 0 auto;
+  /* width: 90%;
+  margin: 0 auto; */
 }
 
 .recent_post_heading {
-  text-align: left;
+  text-align: center;
   font-size: 30px;
   font-weight: bold;
+  padding-bottom: 1rem;
 }
 
 .cards_wrapper2 {
   position: relative;
-  /* top side botoom */
   margin: 100px 0 45px;
-  /* closer */
   padding-left: 50px;
+  width: 100%;
 }
 
 .cards_wrapper3 {
   position: relative;
-  /* top side botoom */
   margin: 100px 0 45px;
+  padding-left: 50px;
+  width: 100%;
 }
 
 .cards_items2 {
@@ -179,60 +176,27 @@ h5 {
   height: 48px !important;
   width: 48px !important;
 }
-/* Social Icons */
-.social-icon-link2 {
-  color: #cacaca;
-  font-size: 24px;
-}
 
-.social-media2 {
-  max-width: 1000px;
-  width: 100%;
+.simple_pagination_container {
   display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 65px;
+  margin-top: 3rem;
 }
-
-.social-media-wrap2 {
+.simple_pagination {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  max-width: 1000px;
-  /* top right bottom left */
-  margin: 0 auto 0 20px;
+  list-style-type: none;
 }
-
-.social-icons2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 200px;
+.about_us_heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 1rem;
 }
-
-.social-logo2 {
-  color: red;
-  justify-self: start;
-  margin-left: 20px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.follow_us_text {
-  font-size: 25px;
-  color: #949494;
-  width: 10rem;
-}
-
-.hr {
-  margin: 100px auto 0 auto;
-  border: 10px solid white;
-}
-
-.grey_line {
-  border: 10px solid B7B7B7;
+.about_us_text {
+  padding-top: 0.5rem;
+  font-size: 20px;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -250,5 +214,12 @@ h5 {
 @media only screen and (max-width: 1024px) {
   .cards_item2 {
     margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .hero-container > h1 {
+    font-size: 50px;
+    margin-top: -100px;
   }
 }

@@ -1,14 +1,14 @@
 .hero-container {
-  background-image: url("./images/home.jpeg");
+  background: url("./images/home.jpeg") center center/cover no-repeat;
   height: 100vh;
-  max-width: 100vw;
-  background-size: cover;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   object-fit: contain;
+  margin: auto -1rem;
 }
 
 @media screen and (max-width: 960px) {

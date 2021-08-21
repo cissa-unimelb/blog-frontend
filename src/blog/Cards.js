@@ -26,7 +26,6 @@ function Cards() {
             <div className = "cards_container">
                 <div className="cards_wrapper">
                     <Grid container spacing = {3} alignItems="center">
-                    {/* <ul className = "cards_item"> */}
                         <Grid item sm={12} md = {6} lg = {3} >
                         <CardItem 
                             src="images/laptop.jpeg"
@@ -71,8 +70,6 @@ function Cards() {
                             timestamp = '10th April 2021'
                         />
                         </Grid>
-
-                    {/* </ul> */}
                     </Grid>
                 </div>
             </div>

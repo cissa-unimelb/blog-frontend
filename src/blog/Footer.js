@@ -9,7 +9,7 @@ function Footer() {
     return (
         <div className='footer-container'>
         <div className = 'footer-content-wrapper'>
-            <Grid container spacing = {3}>
+            <Grid container spacing = {0}>
             <Grid item xs = {6}>
             <div className = 'footer-subscription'>
                 <p className = 'footer-subscription-text'>
@@ -32,6 +32,21 @@ function Footer() {
 
                 <div className = 'footer-link-wrapper'>
                     <div className= 'footer-link-items'>
+
+                        <Link to='/'>News</Link>
+                        <Link to='/'>Industry Talks</Link>
+                        <Link to='/'>Development</Link>
+                        <Link to='/'>Machine Learning</Link>
+                        <Link to='/'>Subject FAQ</Link>
+                    </div>
+                    <div className= 'footer-link-items'>
+                        <Link to='/'>News</Link>
+                        <Link to='/'>Industry Talks</Link>
+                        <Link to='/'>Development</Link>
+                        <Link to='/'>Machine Learning</Link>
+                        <Link to='/'>Subject FAQ</Link>
+                    </div>
+                    <div className= 'footer-link-items'>
                         <Link to='/'>News</Link>
                         <Link to='/'>Industry Talks</Link>
                         <Link to='/'>Development</Link>
@@ -45,7 +60,7 @@ function Footer() {
        
          
             <section class='social-media'>
-                <hr />
+                <hr className="footer_line" />
                 <div class='social-media-wrap'>
          
                 

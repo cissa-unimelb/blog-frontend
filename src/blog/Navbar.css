@@ -4,13 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9375rem;
+  font-size: 1.2rem;
   position: relative;
   top: 0;
   z-index: 999;
-  margin: auto -16px;
-  padding: 0.5rem 0.1rem;
-  font-weight: 200;
+  margin: auto -1rem;
 }
 
 .navbar-container {
@@ -19,28 +17,27 @@
   align-items: center;
   height: 80px;
   max-width: 1500px;
-  width: auto;
 }
-/* 
+
 .navbar-logo {
   color: white;
   justify-self: start;
+  margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
   display: flex;
-
   align-items: center;
 }
 
 .navbar-logo-img {
   height: auto;
-  width: 150px;
+  width: 9.375rem;
 }
 
 .navbar-btn {
   margin-left: -25px;
-} */
+}
 
 /* .fa-typo3 {
     margin-left: 0.5rem;
@@ -49,14 +46,13 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(2, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
-  /* width: 100vw; */
-  justify-content: center;
+  width: 60vw;
+  justify-content: end;
   margin-right: 2rem;
-  width: auto;
 }
 
 .nav-item {
@@ -99,7 +95,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 90vh;
     position: absolute;
     top: 80px;
     left: -100%;
@@ -132,10 +127,8 @@
   .navbar-logo {
     position: absolute;
     top: 0;
-
     left: 0;
     transform: translate(25%, 28%);
-    /* vertical-align: middle; */
   }
 
   .navbar-logo-img {

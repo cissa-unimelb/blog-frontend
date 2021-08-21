@@ -1,33 +1,32 @@
 :root {
-    --primary: #457EB1;
-    --secondary: #457EB1;
+  --primary: #457eb1;
+  --secondary: #457eb1;
 }
 
-.btn{
-    padding: 3px 10px;
-    border-radius: 2px;
-    outline:none;
-    border:none;
-    cursor: pointer;
-   
-}
-.btn-primary{
-    background-color: var(--primary);
-    color: #fff;
+.btn {
+  padding: 3px 10px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
-.btn-secondary{
-    background-color: var(--primary);
-    color: #fff;
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
 }
 
-.btn-medium{
-    width:158px;
-    height:42px;
+.btn-secondary {
+  background-color: var(--primary);
+  color: #fff;
 }
 
-.btn-large{
-    width:158px;
-    height:42px;
+.btn-medium {
+  width: 158px;
+  height: 42px;
 }
 
+.btn-large {
+  width: 158px;
+  height: 42px;
+}

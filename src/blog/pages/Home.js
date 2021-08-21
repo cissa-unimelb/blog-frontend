@@ -1,17 +1,20 @@
 import React from 'react';
 import HeroSection from '../HeroSection';
 import Cards from '../Cards';
-import Navbar from '../Navbar';
+import Navbar2 from '../Navbar2';
 import Footer from '../Footer';
 import RecentPosts from '../RecentPosts';
+import RecentPostsData from '../RecentPostsData';
+
+const recentPosts = [...RecentPostsData]
 
 function Home() {
     return (
         <>
-            <Navbar />
-            <HeroSection />    
+            <HeroSection />
+            <Navbar2 />      
             <Cards />
-            <RecentPosts />
+            <RecentPosts posts = {recentPosts}/>
             <Footer />
         </>
     );

@@ -1,8 +1,6 @@
 .cards {
   /* top side bottom */
   padding: 6rem 4rem 6rem;
-  /* up down side */
-  margin: auto -1rem;
 }
 
 h1 {
@@ -14,7 +12,6 @@ h1 {
   display: flex;
   flex-flow: column;
   align-items: center;
-  /* max-width: 1120px; */
   width: 90%;
   margin: 0 auto;
 }
@@ -42,9 +39,10 @@ h1 {
   width: 21.875rem;
   height: 28em;
   border-radius: 4px;
+  margin-top: 10px;
   overflow: hidden;
   text-decoration: none;
-  background: #eeeeee;
+  background: transparent;
 }
 
 /* images */
@@ -92,7 +90,6 @@ h1 {
   transform: scale(1.1);
 }
 
-/* newly added */
 .cards_item_info {
   /* top side bottom */
   padding: 20px 0px 15px;

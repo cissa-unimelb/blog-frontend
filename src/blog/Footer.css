@@ -17,6 +17,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  width: auto;
 }
 
 .footer-column {
@@ -25,17 +26,14 @@
   flex: 1;
   flex-direction: column;
 }
-/* .footer-subscription-wrapper {
-  display: flex;
-} */
 
 .input-areas {
   display: flex;
   align-items: flex-start;
-  /* flex-direction: column; */
 }
 .btn {
   align-self: flex-start;
+  padding: 3px 10px;
 }
 
 /* left footer box */
@@ -43,12 +41,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   text-align: center;
 
   margin-bottom: 24px;
+  margin-top: 48px;
   /* top right bottom left */
-  padding: 3rem 1rem 6rem 10rem;
+  /* padding: 3rem 1rem 6rem 10rem; */
   color: #fff;
   flex-basis: 100%;
 }
@@ -56,26 +55,26 @@
 .footer-subscription-text {
   margin-bottom: 24px;
   font-size: 20px;
-  max-width: 340px;
+  max-width: 21.25rem;
   text-align: center;
 }
 
 .footer-input {
   /* top right bot left */
-  padding: 9px 130px 6px 20px;
-  border-radius: 4px;
-  margin-right: 10px;
+  /* padding: 9px 130px 6px 20px; */
+  padding: 0.563rem 8.125rem 0.375rem 1.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.625rem;
   outline: none;
-  /* border: none; */
   font-size: 18px;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   border: 2px solid #fff;
   align-self: flex-start;
 }
 
 .footer-links {
   width: 100%;
-  max-width: 1000px;
+  max-width: 62.5rem;
   display: flex;
   justify-content: center;
   flex-basis: 100%;
@@ -93,15 +92,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 16px;
+  margin: 1rem;
   text-align: left;
-  width: 160px;
+  width: 10rem;
   box-sizing: border-box;
   line-height: 20px;
 }
 
 .footer-link-items h2 {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .footer-link-items > h2 {
@@ -160,20 +159,28 @@
   align-items: center;
   margin-bottom: 16px;
 }
-.hr {
-  margin: 100px auto 0 auto;
-  border: 10px solid white;
+.footer_line {
+  margin: 5px auto 0 auto;
+  border: 1px solid white;
 }
-@media screen and (max-width: 820px) {
+/* 820 */
+@media screen and (max-width: 960px) {
+  /* .footer-container {
+    margin: auto -1rem;
+  } */
+  .footer-subscription {
+    flex: center;
+  }
   .footer-links {
     padding-top: 2rem;
   }
 
   .footer-input {
-    width: 100%;
+    width: 200px;
+    /* margin-right: 0; */
   }
 
-  .btn {
+  .btn_subscribe {
     width: 100%;
   }
 
