@@ -21,7 +21,7 @@ function Footer() {
                     <form>
                         <input type='email' name = 'email' placeholder='Enter email...' className = 'footer-input' />
 
-                        <Button className = 'btn' buttonStyle='btn--primary'>Subscribe</Button>
+                        <Button className = 'btn_subscribe' buttonStyle='btn--primary'>Subscribe</Button>
                     </form>
                 </div>
             </div>
