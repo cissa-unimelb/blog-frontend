@@ -12,6 +12,7 @@ import Home from "./blog/pages/Home";
 import Login from "./admin/pages/Login";
 import PostEditor from "./admin/pages/PostEdit";
 import PostList from "./admin/pages/PostList";
+import Navbar from "./blog/Navbar"
 
 function isLoggedIn() {
   const googleToken = localStorage.getItem("googleToken");
@@ -26,7 +27,9 @@ function isLoggedIn() {
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+    <Navbar />
       <Switch>
+        
         <Route path="/" exact component={Home} />
         <Route path="/admin/login" exact component={Login} />
         <Route
